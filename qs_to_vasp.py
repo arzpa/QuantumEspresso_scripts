@@ -1,4 +1,15 @@
 #This function convert a quantum espresso input to VASP POSCAR
+import matplotlib.pyplot as plt
+#import numpy as np
+import pandas as pd
+import os
+import shutil
+import re
+import seaborn as sns
+from itertools import combinations
+import numpy as np
+from pymatgen.core.structure import Structure
+
 def qs_to_vasp_poscar(qs_input,filename):
     input_ = open(qs_input,'r')
     input_lines = input_.readlines()
